@@ -1,0 +1,58 @@
+import type { Project } from "@/features/projects/types";
+
+export const projectsMock: Project[] = [
+  {
+    id: "achealguem",
+    name: "AcheAlguem",
+    headline: "Registre e busque pessoas em situação de rua",
+    description: "Registrar e localizar pessoas desaparecidas.",
+    url: "#",
+    year: 2025,
+    technologies: ["NextJS", "Typescript", "Supabase", "TailwindCSS"],
+  },
+  {
+    id: "mcdonalds",
+    name: "McDonalds",
+    headline: "Clone do app do McDonalds",
+    description: "Clone do aplicativo desenvolvido durante as FSW Week.",
+    url: "#",
+    year: 2024,
+    technologies: ["NextJS", "Typescript", "TailwindCSS"],
+  },
+  {
+    id: "pixqr",
+    name: "PixQR",
+    headline: "Gere QR Codes PIX de forma rápida e fácil",
+    description: "Gere QR Codes PIX de forma rápida e fácil.",
+    url: "#",
+    year: 2025,
+    technologies: ["NextJS", "Typescript", "TailwindCSS", "Stripe"],
+  },
+  {
+    id: "nasa-dashboard",
+    name: "NASA Dashboard",
+    headline: "Explore diversas APIs da NASA",
+    description: "Dashboard que consome as APIs públicas da NASA.",
+    url: "#",
+    year: 2024,
+    technologies: ["NextJS", "Typescript"],
+  },
+  {
+    id: "devstore",
+    name: "DevStore",
+    headline: "E-commerce headless com pagamentos",
+    description: "Loja headless com checkout e pagamentos integrados.",
+    url: "#",
+    year: 2025,
+    technologies: ["NextJS", "Typescript", "Prisma", "Stripe", "TailwindCSS"],
+  },
+  {
+    id: "taskflow",
+    name: "TaskFlow",
+    headline: "Gerenciador de tarefas para devs",
+    description: "Organize tarefas e fluxos de trabalho em tempo real.",
+    url: "#",
+    year: 2024,
+    technologies: ["React", "Typescript", "Supabase"],
+  },
+];
