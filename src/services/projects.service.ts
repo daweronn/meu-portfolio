@@ -19,6 +19,10 @@ export function getTechnologyOptions(): FilterOption[] {
 }
 
 export function getYearOptions(): FilterOption[] {
-  const options = buildOptions(projectsMock.map((project) => String(project.year)));
+  const years = projectsMock
+    .map((project) => project.year)
+    .filter((year): year is number => year !== undefined)
+    .map(String);
+  const options = buildOptions(years);
   return options.sort((a, b) => Number(b.value) - Number(a.value));
 }

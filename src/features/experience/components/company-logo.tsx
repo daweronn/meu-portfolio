@@ -13,7 +13,7 @@ export function CompanyLogo({ company, src }: CompanyLogoProps) {
         alt={company}
         width={28}
         height={28}
-        className="size-7 rounded-md object-cover"
+        className="size-7 rounded-md object-contain"
       />
     );
   }

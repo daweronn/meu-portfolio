@@ -6,7 +6,7 @@ export function ProfileIntro() {
   const { location } = profile;
 
   return (
-    <section className="flex items-start gap-5 sm:gap-6">
+    <section className="flex items-stretch gap-5 sm:gap-6">
       <ProfileAvatar name={profile.name} src={profile.avatarUrl} />
       <div className="flex max-w-md flex-col justify-center gap-2">
         <h1 className="text-2xl tracking-tight text-foreground">

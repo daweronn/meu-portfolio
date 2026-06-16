@@ -10,10 +10,11 @@ export function ProfileAvatar({ name, src }: ProfileAvatarProps) {
     <Image
       src={src}
       alt={name}
-      width={160}
-      height={160}
+      width={2048}
+      height={2048}
       priority
-      className="size-32 shrink-0 rounded-lg object-cover sm:size-40"
+      sizes="240px"
+      className="aspect-square w-auto shrink-0 self-stretch rounded-xl object-cover"
     />
   );
 }

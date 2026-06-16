@@ -2,8 +2,8 @@ import type { Profile } from "@/features/profile/types";
 
 export const profileMock: Profile = {
   name: "David Felicio",
-  bio: "Desenvolvedor de software fullstack que transforma problemas complexos em soluções simples. Me importo com cada detalhe que faz um produto funcionar de verdade.",
-  avatarUrl: "/logo.jpg",
+  bio: "Desenvolvedor fullstack. Construo marketplaces, ERPs, automações e produtos web sob medida — do backend à interface. A complexidade reduzida à sua forma mais simples.",
+  avatarUrl: "/eu.png",
   location: {
     city: "Rio de Janeiro",
     country: "Brasil",

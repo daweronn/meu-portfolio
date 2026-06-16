@@ -24,7 +24,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.technologies.map((tech) => (
             <Tag key={tech}>{tech}</Tag>
           ))}
-          <Tag>{project.year}</Tag>
+          {project.year !== undefined && <Tag>{project.year}</Tag>}
         </div>
       </div>
     </a>

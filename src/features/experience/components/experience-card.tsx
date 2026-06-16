@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { BrandIcon } from "@/components/ui/brand-icon";
 import { CompanyLogo } from "@/features/experience/components/company-logo";
 import type { Experience } from "@/features/experience/types";
@@ -11,9 +12,13 @@ function formatPeriod(experience: Experience): string {
   return `${experience.startYear} — ${end}`;
 }
 
+function formatWebsite(url: string): string {
+  return url.replace(/^https?:\/\//, "");
+}
+
 export function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
-    <article className="rounded-xl border border-border bg-background p-5">
+    <article className="relative rounded-xl border border-border bg-background p-5 transition-colors hover:border-foreground/20">
       <div className="flex items-start justify-between gap-4">
         <div className="space-y-3">
           {experience.current && (
@@ -40,10 +45,23 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
       <p className="mt-4 text-sm leading-relaxed text-muted">
         {experience.description}
       </p>
-      <div className="mt-4 flex flex-wrap items-center gap-3 text-muted">
-        {experience.technologies.map((slug) => (
-          <BrandIcon key={slug} slug={slug} monochrome className="size-4" />
-        ))}
+      <div className="mt-4 flex items-end justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-3 text-muted">
+          {experience.technologies.map((slug) => (
+            <BrandIcon key={slug} slug={slug} monochrome className="size-4" />
+          ))}
+        </div>
+        {experience.website && (
+          <a
+            href={experience.website}
+            target="_blank"
+            rel="noreferrer"
+            className="group/link inline-flex shrink-0 items-center gap-1 text-sm text-muted transition-colors hover:text-foreground before:absolute before:inset-0"
+          >
+            {formatWebsite(experience.website)}
+            <ArrowUpRight className="size-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+          </a>
+        )}
       </div>
     </article>
   );

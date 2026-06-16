@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "David Felicio — Desenvolvedor de Software Fullstack",
+  title: "David Felicio - Desenvolvedor de Software Fullstack",
   description: "A complexidade reduzida à sua forma mais simples.",
 };
 
@@ -32,7 +32,11 @@ export default function RootLayout({
           "min-h-dvh bg-background font-sans",
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+        >
           <Navbar />
           {children}
         </ThemeProvider>

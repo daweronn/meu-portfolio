@@ -4,6 +4,7 @@ export interface Experience {
   company: string;
   companyLogoUrl?: string;
   locationType: string;
+  website?: string;
   startYear: number;
   endYear?: number;
   description: string;
