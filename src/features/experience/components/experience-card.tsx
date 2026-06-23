@@ -1,14 +1,15 @@
 import { ArrowUpRight } from "lucide-react";
 import { BrandIcon } from "@/components/ui/brand-icon";
 import { CompanyLogo } from "@/features/experience/components/company-logo";
-import type { Experience } from "@/features/experience/types";
+import type { Experience, ExperienceLabels } from "@/features/experience/types";
 
 interface ExperienceCardProps {
   experience: Experience;
+  labels: ExperienceLabels;
 }
 
-function formatPeriod(experience: Experience): string {
-  const end = experience.endYear ?? "Presente";
+function formatPeriod(experience: Experience, present: string): string {
+  const end = experience.endYear ?? present;
   return `${experience.startYear} — ${end}`;
 }
 
@@ -16,7 +17,7 @@ function formatWebsite(url: string): string {
   return url.replace(/^https?:\/\//, "");
 }
 
-export function ExperienceCard({ experience }: ExperienceCardProps) {
+export function ExperienceCard({ experience, labels }: ExperienceCardProps) {
   return (
     <article className="relative rounded-xl border border-border bg-background p-5 transition-colors hover:border-foreground/20">
       <div className="flex items-start justify-between gap-4">
@@ -24,13 +25,13 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           {experience.current && (
             <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-label text-accent">
               <span className="size-1.5 rounded-full bg-accent" />
-              Atualmente
+              {labels.current}
             </span>
           )}
           <div className="space-y-1">
             <h3 className="text-lg text-foreground">{experience.role}</h3>
             <p className="text-xs uppercase tracking-label text-muted">
-              {formatPeriod(experience)}
+              {formatPeriod(experience, labels.present)}
             </p>
           </div>
         </div>

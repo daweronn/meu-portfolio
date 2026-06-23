@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { ProjectCard } from "@/features/projects/components/project-card";
-import type { Project } from "@/features/projects/types";
+import type { Project, ProjectLabels } from "@/features/projects/types";
 
 interface ProjectCarouselProps {
   projects: Project[];
+  labels: ProjectLabels;
 }
 
 type Direction = 1 | -1;
@@ -15,16 +16,22 @@ type Direction = 1 | -1;
 interface CarouselButtonProps {
   direction: Direction;
   disabled: boolean;
+  label: string;
   onScroll: (direction: Direction) => void;
 }
 
-function CarouselButton({ direction, disabled, onScroll }: CarouselButtonProps) {
+function CarouselButton({
+  direction,
+  disabled,
+  label,
+  onScroll,
+}: CarouselButtonProps) {
   const Icon = direction === 1 ? ChevronRight : ChevronLeft;
 
   return (
     <button
       type="button"
-      aria-label={direction === 1 ? "Próximos projetos" : "Projetos anteriores"}
+      aria-label={label}
       disabled={disabled}
       onClick={() => onScroll(direction)}
       className={cn(
@@ -39,7 +46,7 @@ function CarouselButton({ direction, disabled, onScroll }: CarouselButtonProps) 
   );
 }
 
-export function ProjectCarousel({ projects }: ProjectCarouselProps) {
+export function ProjectCarousel({ projects, labels }: ProjectCarouselProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(true);
@@ -75,14 +82,19 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
   if (projects.length === 0) {
     return (
       <p className="rounded-xl border border-dashed border-border py-12 text-center text-sm text-muted">
-        Nenhum projeto encontrado.
+        {labels.empty}
       </p>
     );
   }
 
   return (
     <div className="flex items-center gap-2 sm:gap-3">
-      <CarouselButton direction={-1} disabled={atStart} onScroll={scroll} />
+      <CarouselButton
+        direction={-1}
+        disabled={atStart}
+        label={labels.previous}
+        onScroll={scroll}
+      />
       <div
         ref={trackRef}
         className="no-scrollbar -my-6 flex min-w-0 flex-1 snap-x snap-mandatory items-start overflow-x-auto scroll-smooth py-8"
@@ -92,11 +104,16 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
             key={project.id}
             className="flex w-[calc(100%/3)] shrink-0 snap-start px-2"
           >
-            <ProjectCard project={project} />
+            <ProjectCard project={project} labels={labels} />
           </div>
         ))}
       </div>
-      <CarouselButton direction={1} disabled={atEnd} onScroll={scroll} />
+      <CarouselButton
+        direction={1}
+        disabled={atEnd}
+        label={labels.next}
+        onScroll={scroll}
+      />
     </div>
   );
 }

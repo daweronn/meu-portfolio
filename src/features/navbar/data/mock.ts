@@ -1,4 +1,5 @@
-import type { SocialLink } from "@/features/navbar/types";
+import type { NavbarLabels, SocialLink } from "@/features/navbar/types";
+import type { Locale } from "@/types/locale";
 
 export const socialsMock: SocialLink[] = [
   {
@@ -17,3 +18,14 @@ export const socialsMock: SocialLink[] = [
     href: "mailto:davidfelicio2402@gmail.com",
   },
 ];
+
+export const navbarLabelsByLocale: Record<Locale, NavbarLabels> = {
+  pt: {
+    language: "Alterar idioma",
+    theme: "Alternar tema",
+  },
+  en: {
+    language: "Change language",
+    theme: "Toggle theme",
+  },
+};

@@ -6,15 +6,16 @@ import { Tag } from "@/components/ui/tag";
 import { ProjectPreview } from "@/features/projects/components/project-preview";
 import { useClampOverflow } from "@/features/projects/hooks/use-clamp-overflow";
 import { useExpandHeight } from "@/features/projects/hooks/use-expand-height";
-import type { Project } from "@/features/projects/types";
+import type { Project, ProjectLabels } from "@/features/projects/types";
 
 const collapsedBodyHeight = "6.5rem";
 
 interface ProjectCardProps {
   project: Project;
+  labels: ProjectLabels;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, labels }: ProjectCardProps) {
   const { ref: bodyRef, expanded, toggle } =
     useExpandHeight<HTMLDivElement>(collapsedBodyHeight);
   const { ref: descriptionRef, overflowing } =
@@ -54,7 +55,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           onClick={toggle}
           className="relative z-10 self-start px-1 text-xs font-medium text-foreground/70 transition-colors hover:text-foreground"
         >
-          {expanded ? "Ver menos" : "Ver mais"}
+          {expanded ? labels.seeLess : labels.seeMore}
         </button>
       )}
       <a

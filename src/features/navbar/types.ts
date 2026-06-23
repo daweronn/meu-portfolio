@@ -5,3 +5,8 @@ export interface SocialLink {
   label: string;
   href: string;
 }
+
+export interface NavbarLabels {
+  language: string;
+  theme: string;
+}

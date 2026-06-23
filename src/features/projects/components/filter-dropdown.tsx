@@ -10,6 +10,7 @@ import type { FilterOption } from "@/features/projects/types";
 
 interface FilterDropdownProps {
   label: string;
+  clearLabel: string;
   options: FilterOption[];
   selected: string[];
   onToggle: (value: string) => void;
@@ -18,6 +19,7 @@ interface FilterDropdownProps {
 
 export function FilterDropdown({
   label,
+  clearLabel,
   options,
   selected,
   onToggle,
@@ -84,7 +86,7 @@ export function FilterDropdown({
             onClick={onClear}
             className="mt-1 w-full border-t border-border px-2 py-1.5 text-center text-sm text-muted transition-colors hover:text-foreground"
           >
-            Limpar filtros
+            {clearLabel}
           </button>
         </div>
       )}

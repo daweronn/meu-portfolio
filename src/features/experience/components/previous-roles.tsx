@@ -4,13 +4,14 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { ExperienceTimelineItem } from "@/features/experience/components/experience-timeline-item";
-import type { Experience } from "@/features/experience/types";
+import type { Experience, ExperienceLabels } from "@/features/experience/types";
 
 interface PreviousRolesProps {
   experiences: Experience[];
+  labels: ExperienceLabels;
 }
 
-export function PreviousRoles({ experiences }: PreviousRolesProps) {
+export function PreviousRoles({ experiences, labels }: PreviousRolesProps) {
   const [open, setOpen] = useState(false);
 
   if (experiences.length === 0) {
@@ -31,7 +32,7 @@ export function PreviousRoles({ experiences }: PreviousRolesProps) {
             open && "rotate-180",
           )}
         />
-        Cargos anteriores
+        {labels.previousRoles}
       </button>
       <div
         className={cn(
@@ -42,7 +43,11 @@ export function PreviousRoles({ experiences }: PreviousRolesProps) {
         <div className="overflow-hidden">
           <ol className="relative ml-1 mt-6 space-y-6 border-l border-border pl-6">
             {experiences.map((experience) => (
-              <ExperienceTimelineItem key={experience.id} experience={experience} />
+              <ExperienceTimelineItem
+                key={experience.id}
+                experience={experience}
+                labels={labels}
+              />
             ))}
           </ol>
         </div>

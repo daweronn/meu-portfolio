@@ -2,7 +2,7 @@
 
 import { Search, X } from "lucide-react";
 import { FilterDropdown } from "@/features/projects/components/filter-dropdown";
-import type { FilterOption } from "@/features/projects/types";
+import type { FilterOption, ProjectLabels } from "@/features/projects/types";
 
 interface ProjectFiltersProps {
   query: string;
@@ -13,6 +13,7 @@ interface ProjectFiltersProps {
   onClearTechnologies: () => void;
   hasFilters: boolean;
   onClearAll: () => void;
+  labels: ProjectLabels;
 }
 
 export function ProjectFilters({
@@ -24,6 +25,7 @@ export function ProjectFilters({
   onClearTechnologies,
   hasFilters,
   onClearAll,
+  labels,
 }: ProjectFiltersProps) {
   return (
     <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
@@ -32,13 +34,14 @@ export function ProjectFilters({
         <input
           value={query}
           onChange={(event) => onQueryChange(event.target.value)}
-          placeholder="Filtrar projetos..."
+          placeholder={labels.searchPlaceholder}
           className="w-full rounded-lg border border-border bg-background py-2 pl-9 pr-3 text-sm text-foreground placeholder:text-muted focus:outline-none focus:ring-1 focus:ring-border"
         />
       </div>
       <div className="flex items-center gap-2">
         <FilterDropdown
-          label="Tecnologia"
+          label={labels.technology}
+          clearLabel={labels.clearFilters}
           options={technologyOptions}
           selected={selectedTechnologies}
           onToggle={onToggleTechnology}
@@ -47,7 +50,7 @@ export function ProjectFilters({
         {hasFilters && (
           <button
             type="button"
-            aria-label="Limpar todos os filtros"
+            aria-label={labels.clearAll}
             onClick={onClearAll}
             className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg text-muted transition-colors hover:bg-surface hover:text-foreground"
           >

@@ -1,8 +1,12 @@
+"use client";
+
 import { getProfile } from "@/services/profile.service";
 import { ProfileAvatar } from "@/features/profile/components/profile-avatar";
+import { useLocale } from "@/hooks/use-locale";
 
 export function ProfileIntro() {
-  const profile = getProfile();
+  const { locale } = useLocale();
+  const profile = getProfile(locale);
   const { location } = profile;
 
   return (

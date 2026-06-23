@@ -11,3 +11,10 @@ export interface Experience {
   technologies: string[];
   current: boolean;
 }
+
+export interface ExperienceLabels {
+  section: string;
+  current: string;
+  present: string;
+  previousRoles: string;
+}

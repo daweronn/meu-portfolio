@@ -1,8 +1,17 @@
-import { projectsMock } from "@/features/projects/data/mock";
-import type { FilterOption, Project } from "@/features/projects/types";
+import { localizedProjects } from "@/features/projects/data/mock";
+import { projectLabelsByLocale } from "@/features/projects/data/labels";
+import type {
+  FilterOption,
+  Project,
+  ProjectLabels,
+} from "@/features/projects/types";
+import type { Locale } from "@/types/locale";
 
-export function getProjects(): Project[] {
-  return projectsMock;
+export function getProjects(locale: Locale): Project[] {
+  return localizedProjects.map(({ content, ...base }) => ({
+    ...base,
+    ...content[locale],
+  }));
 }
 
 function buildOptions(values: string[]): FilterOption[] {
@@ -13,7 +22,13 @@ function buildOptions(values: string[]): FilterOption[] {
   return Array.from(counts, ([value, count]) => ({ value, label: value, count }));
 }
 
-export function getTechnologyOptions(): FilterOption[] {
-  const options = buildOptions(projectsMock.flatMap((project) => project.technologies));
+export function getTechnologyOptions(locale: Locale): FilterOption[] {
+  const options = buildOptions(
+    getProjects(locale).flatMap((project) => project.technologies),
+  );
   return options.sort((a, b) => b.count - a.count);
+}
+
+export function getProjectLabels(locale: Locale): ProjectLabels {
+  return projectLabelsByLocale[locale];
 }

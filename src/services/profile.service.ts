@@ -1,6 +1,7 @@
-import { profileMock } from "@/features/profile/data/mock";
+import { profileByLocale } from "@/features/profile/data/mock";
 import type { Profile } from "@/features/profile/types";
+import type { Locale } from "@/types/locale";
 
-export function getProfile(): Profile {
-  return profileMock;
+export function getProfile(locale: Locale): Profile {
+  return profileByLocale[locale];
 }

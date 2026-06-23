@@ -3,16 +3,22 @@
 import { useProjectFilters } from "@/features/projects/hooks/use-project-filters";
 import { ProjectFilters } from "@/features/projects/components/project-filters";
 import { ProjectCarousel } from "@/features/projects/components/project-carousel";
-import type { FilterOption, Project } from "@/features/projects/types";
+import type {
+  FilterOption,
+  Project,
+  ProjectLabels,
+} from "@/features/projects/types";
 
 interface ProjectsExplorerProps {
   projects: Project[];
   technologyOptions: FilterOption[];
+  labels: ProjectLabels;
 }
 
 export function ProjectsExplorer({
   projects,
   technologyOptions,
+  labels,
 }: ProjectsExplorerProps) {
   const filters = useProjectFilters(projects);
 
@@ -27,8 +33,9 @@ export function ProjectsExplorer({
         onClearTechnologies={filters.clearTechnologies}
         hasFilters={filters.hasFilters}
         onClearAll={filters.clearAll}
+        labels={labels}
       />
-      <ProjectCarousel projects={filters.filtered} />
+      <ProjectCarousel projects={filters.filtered} labels={labels} />
     </div>
   );
 }

@@ -1,17 +1,19 @@
 import { BrandIcon } from "@/components/ui/brand-icon";
 import { CompanyLogo } from "@/features/experience/components/company-logo";
-import type { Experience } from "@/features/experience/types";
+import type { Experience, ExperienceLabels } from "@/features/experience/types";
 
 interface ExperienceTimelineItemProps {
   experience: Experience;
+  labels: ExperienceLabels;
 }
 
-function formatPeriod(experience: Experience): string {
-  return `${experience.startYear} — ${experience.endYear ?? "Presente"}`;
+function formatPeriod(experience: Experience, present: string): string {
+  return `${experience.startYear} — ${experience.endYear ?? present}`;
 }
 
 export function ExperienceTimelineItem({
   experience,
+  labels,
 }: ExperienceTimelineItemProps) {
   return (
     <li className="relative">
@@ -20,7 +22,7 @@ export function ExperienceTimelineItem({
         <div className="space-y-1">
           <h3 className="text-foreground">{experience.role}</h3>
           <p className="text-xs uppercase tracking-label text-muted">
-            {formatPeriod(experience)}
+            {formatPeriod(experience, labels.present)}
           </p>
         </div>
         <div className="flex shrink-0 items-center gap-2">

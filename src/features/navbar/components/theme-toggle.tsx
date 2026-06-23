@@ -4,9 +4,13 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { IconButton } from "@/components/ui/icon-button";
+import { getNavbarLabels } from "@/services/navbar.service";
+import { useLocale } from "@/hooks/use-locale";
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
+  const { locale } = useLocale();
+  const labels = getNavbarLabels(locale);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -17,7 +21,7 @@ export function ThemeToggle() {
 
   return (
     <IconButton
-      aria-label="Alternar tema"
+      aria-label={labels.theme}
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >
       <span suppressHydrationWarning>

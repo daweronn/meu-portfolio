@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { GeistMono } from "geist/font/mono";
 import { cn } from "@/lib/utils/cn";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { LocaleProvider } from "@/components/providers/locale-provider";
 import { Navbar } from "@/features/navbar/components/navbar";
 import "flag-icons/css/flag-icons.min.css";
 import "./globals.css";
@@ -24,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt" suppressHydrationWarning>
       <body
         className={cn(
           inter.variable,
@@ -37,8 +38,10 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem={false}
         >
-          <Navbar />
-          {children}
+          <LocaleProvider>
+            <Navbar />
+            {children}
+          </LocaleProvider>
         </ThemeProvider>
       </body>
     </html>
