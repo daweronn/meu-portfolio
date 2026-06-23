@@ -8,13 +8,11 @@ import type { FilterOption, Project } from "@/features/projects/types";
 interface ProjectsExplorerProps {
   projects: Project[];
   technologyOptions: FilterOption[];
-  yearOptions: FilterOption[];
 }
 
 export function ProjectsExplorer({
   projects,
   technologyOptions,
-  yearOptions,
 }: ProjectsExplorerProps) {
   const filters = useProjectFilters(projects);
 
@@ -27,10 +25,6 @@ export function ProjectsExplorer({
         selectedTechnologies={filters.selectedTechnologies}
         onToggleTechnology={filters.toggleTechnology}
         onClearTechnologies={filters.clearTechnologies}
-        yearOptions={yearOptions}
-        selectedYears={filters.selectedYears}
-        onToggleYear={filters.toggleYear}
-        onClearYears={filters.clearYears}
         hasFilters={filters.hasFilters}
         onClearAll={filters.clearAll}
       />

@@ -14,7 +14,7 @@ export function ProjectPreview({ project }: ProjectPreviewProps) {
           alt={project.name}
           fill
           sizes="(max-width: 640px) 85vw, 320px"
-          className="object-cover"
+          className="object-contain"
         />
       )}
     </div>

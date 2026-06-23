@@ -11,10 +11,6 @@ interface ProjectFiltersProps {
   selectedTechnologies: string[];
   onToggleTechnology: (value: string) => void;
   onClearTechnologies: () => void;
-  yearOptions: FilterOption[];
-  selectedYears: string[];
-  onToggleYear: (value: string) => void;
-  onClearYears: () => void;
   hasFilters: boolean;
   onClearAll: () => void;
 }
@@ -26,10 +22,6 @@ export function ProjectFilters({
   selectedTechnologies,
   onToggleTechnology,
   onClearTechnologies,
-  yearOptions,
-  selectedYears,
-  onToggleYear,
-  onClearYears,
   hasFilters,
   onClearAll,
 }: ProjectFiltersProps) {
@@ -51,13 +43,6 @@ export function ProjectFilters({
           selected={selectedTechnologies}
           onToggle={onToggleTechnology}
           onClear={onClearTechnologies}
-        />
-        <FilterDropdown
-          label="Ano"
-          options={yearOptions}
-          selected={selectedYears}
-          onToggle={onToggleYear}
-          onClear={onClearYears}
         />
         {hasFilters && (
           <button

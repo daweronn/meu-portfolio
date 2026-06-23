@@ -12,7 +12,6 @@ function toggleValue(values: string[], value: string): string[] {
 export function useProjectFilters(projects: Project[]) {
   const [query, setQuery] = useState("");
   const [selectedTechnologies, setSelectedTechnologies] = useState<string[]>([]);
-  const [selectedYears, setSelectedYears] = useState<string[]>([]);
 
   const filtered = useMemo(() => {
     const term = query.trim().toLowerCase();
@@ -24,14 +23,11 @@ export function useProjectFilters(projects: Project[]) {
       const matchesTech =
         selectedTechnologies.length === 0 ||
         project.technologies.some((tech) => selectedTechnologies.includes(tech));
-      const matchesYear =
-        selectedYears.length === 0 || selectedYears.includes(String(project.year));
-      return matchesQuery && matchesTech && matchesYear;
+      return matchesQuery && matchesTech;
     });
-  }, [projects, query, selectedTechnologies, selectedYears]);
+  }, [projects, query, selectedTechnologies]);
 
-  const hasFilters =
-    query !== "" || selectedTechnologies.length > 0 || selectedYears.length > 0;
+  const hasFilters = query !== "" || selectedTechnologies.length > 0;
 
   return {
     query,
@@ -40,15 +36,11 @@ export function useProjectFilters(projects: Project[]) {
     toggleTechnology: (value: string) =>
       setSelectedTechnologies((prev) => toggleValue(prev, value)),
     clearTechnologies: () => setSelectedTechnologies([]),
-    selectedYears,
-    toggleYear: (value: string) => setSelectedYears((prev) => toggleValue(prev, value)),
-    clearYears: () => setSelectedYears([]),
     filtered,
     hasFilters,
     clearAll: () => {
       setQuery("");
       setSelectedTechnologies([]);
-      setSelectedYears([]);
     },
   };
 }

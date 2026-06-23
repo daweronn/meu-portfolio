@@ -1,9 +1,5 @@
 import { SectionLabel } from "@/components/ui/section-label";
-import {
-  getProjects,
-  getTechnologyOptions,
-  getYearOptions,
-} from "@/services/projects.service";
+import { getProjects, getTechnologyOptions } from "@/services/projects.service";
 import { ProjectsExplorer } from "@/features/projects/components/projects-explorer";
 
 export function ProjectsSection() {
@@ -13,7 +9,6 @@ export function ProjectsSection() {
       <ProjectsExplorer
         projects={getProjects()}
         technologyOptions={getTechnologyOptions()}
-        yearOptions={getYearOptions()}
       />
     </section>
   );
