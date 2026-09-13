@@ -20,7 +20,7 @@ function formatWebsite(url: string): string {
 export function ExperienceCard({ experience, labels }: ExperienceCardProps) {
   return (
     <article className="relative rounded-xl border border-border bg-background p-5 transition-colors hover:border-foreground/20">
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
         <div className="space-y-3">
           {experience.current && (
             <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-label text-accent">

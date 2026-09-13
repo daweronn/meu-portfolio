@@ -7,6 +7,22 @@ const iconByType: Record<SocialType, LucideIcon> = {
   email: Mail,
 };
 
+export function SocialLinkItem({ social }: { social: SocialLink }) {
+  const Icon = iconByType[social.type];
+  const isExternal = social.href.startsWith("http");
+
+  return (
+    <a
+      href={social.href}
+      aria-label={social.label}
+      {...(isExternal && { target: "_blank", rel: "noreferrer" })}
+      className="inline-flex size-9 items-center justify-center rounded-md text-muted transition-colors hover:bg-surface hover:text-foreground"
+    >
+      <Icon className="size-4" />
+    </a>
+  );
+}
+
 interface SocialLinksProps {
   socials: SocialLink[];
 }
@@ -14,23 +30,11 @@ interface SocialLinksProps {
 export function SocialLinks({ socials }: SocialLinksProps) {
   return (
     <ul className="flex items-center gap-0.5">
-      {socials.map((social) => {
-        const Icon = iconByType[social.type];
-        const isExternal = social.href.startsWith("http");
-
-        return (
-          <li key={social.type}>
-            <a
-              href={social.href}
-              aria-label={social.label}
-              {...(isExternal && { target: "_blank", rel: "noreferrer" })}
-              className="inline-flex size-9 items-center justify-center rounded-md text-muted transition-colors hover:bg-surface hover:text-foreground"
-            >
-              <Icon className="size-4" />
-            </a>
-          </li>
-        );
-      })}
+      {socials.map((social) => (
+        <li key={social.type}>
+          <SocialLinkItem social={social} />
+        </li>
+      ))}
     </ul>
   );
 }

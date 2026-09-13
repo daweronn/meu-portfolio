@@ -1,0 +1,40 @@
+{
+  "repoUrl": null,
+  "gallery": [
+    {
+      "file": "01-bip-e-sugestao.webp",
+      "caption": {
+        "pt": "Bipou ou buscou o item, o painel sugere o que agregar",
+        "en": "Scan or search an item, the panel suggests add-ons"
+      }
+    },
+    {
+      "file": "02-cesta-em-andamento.webp",
+      "caption": {
+        "pt": "A cada bip a cesta cresce e as sugestões mudam",
+        "en": "Each scan grows the basket and updates suggestions"
+      }
+    },
+    {
+      "file": "03-sugestoes-ativas.webp",
+      "caption": {
+        "pt": "Todas as sugestões ativas da pré-venda, com argumento e preço",
+        "en": "All active suggestions for the sale, with pitch and price"
+      }
+    },
+    {
+      "file": "04-duvidas.webp",
+      "caption": {
+        "pt": "Dúvidas respondidas pela base local, sem chamar modelo",
+        "en": "Questions answered from the local base, no model call"
+      }
+    },
+    {
+      "file": "05-catalogo-e-pesquisa.webp",
+      "caption": {
+        "pt": "Catálogo com filtros e pesquisa por nome ou substância",
+        "en": "Catalogue with filters and search by name or substance"
+      }
+    }
+  ]
+}

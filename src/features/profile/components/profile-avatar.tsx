@@ -14,7 +14,7 @@ export function ProfileAvatar({ name, src }: ProfileAvatarProps) {
       height={2048}
       priority
       sizes="240px"
-      className="aspect-square w-auto shrink-0 self-stretch rounded-xl object-cover"
+      className="aspect-square size-24 shrink-0 self-start rounded-xl object-cover sm:size-auto sm:self-stretch"
     />
   );
 }

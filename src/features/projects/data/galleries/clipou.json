@@ -1,0 +1,61 @@
+{
+  "repoUrl": null,
+  "gallery": [
+    {
+      "file": "01-site-da-arena.webp",
+      "caption": {
+        "pt": "Site da arena com todos os lances e duas câmeras",
+        "en": "Arena site with every play from two cameras"
+      }
+    },
+    {
+      "file": "02-site-no-celular.webp",
+      "caption": {
+        "pt": "No celular: lista de lances e player do replay",
+        "en": "On mobile: play list and replay player"
+      }
+    },
+    {
+      "file": "03-replay-16x9.webp",
+      "caption": {
+        "pt": "Replay 16:9 com logos e patrocinadores queimados",
+        "en": "16:9 replay with burned-in logos and sponsors"
+      }
+    },
+    {
+      "file": "04-story-9x16.webp",
+      "caption": {
+        "pt": "Story 9:16 gerado automaticamente, pronto para compartilhar",
+        "en": "Auto-generated 9:16 story, ready to share"
+      }
+    },
+    {
+      "file": "05-replay-studio.webp",
+      "caption": {
+        "pt": "Painel admin: estúdio de replays e disparo manual",
+        "en": "Admin panel: replay studio and manual trigger"
+      }
+    },
+    {
+      "file": "06-patrocinadores.webp",
+      "caption": {
+        "pt": "Slots de patrocinadores com simulador do overlay",
+        "en": "Sponsor slots with overlay simulator"
+      }
+    },
+    {
+      "file": "07-dispositivos.webp",
+      "caption": {
+        "pt": "Botões ESP32 e câmeras RTSP por quadra",
+        "en": "ESP32 buttons and RTSP cameras per court"
+      }
+    },
+    {
+      "file": "08-landing.webp",
+      "caption": {
+        "pt": "Landing do clipou.online",
+        "en": "clipou.online landing page"
+      }
+    }
+  ]
+}

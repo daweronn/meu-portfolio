@@ -1,4 +1,5 @@
 import { localizedProjects } from "@/features/projects/data/mock";
+import { galleriesByProject } from "@/features/projects/data/galleries";
 import { projectLabelsByLocale } from "@/features/projects/data/labels";
 import type {
   FilterOption,
@@ -7,10 +8,28 @@ import type {
 } from "@/features/projects/types";
 import type { Locale } from "@/types/locale";
 
+const assetsPath = "/projetos";
+
+function resolveGallery(
+  id: string,
+  locale: Locale,
+): Pick<Project, "gallery" | "repoUrl"> {
+  const entry = galleriesByProject[id];
+  return {
+    repoUrl: entry?.repoUrl ?? undefined,
+    gallery: (entry?.gallery ?? []).map((image) => ({
+      src: `${assetsPath}/${id}/${image.file}`,
+      caption: image.caption[locale],
+    })),
+  };
+}
+
 export function getProjects(locale: Locale): Project[] {
   return localizedProjects.map(({ content, ...base }) => ({
     ...base,
     ...content[locale],
+    imageUrl: `${assetsPath}/${base.id}/cover.webp`,
+    ...resolveGallery(base.id, locale),
   }));
 }
 

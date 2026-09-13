@@ -1,6 +1,7 @@
 import { ProfileIntro } from "@/features/profile/components/profile-intro";
 import { ExperienceSection } from "@/features/experience/components/experience-section";
 import { ProjectsSection } from "@/features/projects/components/projects-section";
+import { FutureSection } from "@/features/future/components/future-section";
 import { StackGrid } from "@/features/stack/components/stack-grid";
 
 export default function HomePage() {
@@ -9,6 +10,7 @@ export default function HomePage() {
       <ProfileIntro />
       <ExperienceSection />
       <ProjectsSection />
+      <FutureSection />
       <StackGrid />
     </main>
   );

@@ -1,0 +1,61 @@
+{
+  "repoUrl": null,
+  "gallery": [
+    {
+      "file": "01-visao-geral.webp",
+      "caption": {
+        "pt": "Visão geral do criador: saldo Pix, membros e churn",
+        "en": "Creator overview: Pix balance, members and churn"
+      }
+    },
+    {
+      "file": "02-financeiro-membros.webp",
+      "caption": {
+        "pt": "Financeiro do clube com a taxa de 30% do YouTube",
+        "en": "Club finances net of YouTube's 30% fee"
+      }
+    },
+    {
+      "file": "03-mensagens-pix.webp",
+      "caption": {
+        "pt": "Saldo e saque das Mensagens Pix",
+        "en": "Pix message balance and withdrawals"
+      }
+    },
+    {
+      "file": "04-overlay-ao-vivo.webp",
+      "caption": {
+        "pt": "Alerta Pix e cronômetro da Subathon na overlay do OBS",
+        "en": "Pix alert and Subathon timer on the OBS overlay"
+      }
+    },
+    {
+      "file": "05-controle-overlay.webp",
+      "caption": {
+        "pt": "Posicionamento e teste dos alertas da overlay",
+        "en": "Positioning and testing overlay alerts"
+      }
+    },
+    {
+      "file": "06-pagina-publica.webp",
+      "caption": {
+        "pt": "Página pública: links, Pix com voz e resgate de código",
+        "en": "Public page: links, voiced Pix and code redemption"
+      }
+    },
+    {
+      "file": "07-editor-pagina.webp",
+      "caption": {
+        "pt": "Editor do linktree público do criador",
+        "en": "Editor for the creator's public linktree"
+      }
+    },
+    {
+      "file": "08-mensagens-live.webp",
+      "caption": {
+        "pt": "Engajamento das mensagens de membros por tier",
+        "en": "Member live-message engagement by tier"
+      }
+    }
+  ]
+}

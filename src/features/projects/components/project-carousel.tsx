@@ -35,7 +35,7 @@ function CarouselButton({
       disabled={disabled}
       onClick={() => onScroll(direction)}
       className={cn(
-        "flex size-8 shrink-0 items-center justify-center rounded-full border border-border bg-background transition-colors",
+        "hidden size-8 shrink-0 items-center justify-center rounded-full border border-border bg-background transition-colors sm:flex",
         disabled
           ? "cursor-not-allowed text-muted/30"
           : "text-muted hover:bg-surface hover:text-foreground",
@@ -102,7 +102,7 @@ export function ProjectCarousel({ projects, labels }: ProjectCarouselProps) {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="flex w-[calc(100%/3)] shrink-0 snap-start px-2"
+            className="flex w-[85%] shrink-0 snap-start px-2 sm:w-1/2 lg:w-[calc(100%/3)]"
           >
             <ProjectCard project={project} labels={labels} />
           </div>

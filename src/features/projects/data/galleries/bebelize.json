@@ -1,0 +1,61 @@
+{
+  "repoUrl": null,
+  "gallery": [
+    {
+      "file": "01-editor.webp",
+      "caption": {
+        "pt": "Editor por camadas: textura em cada parte e brasão arrastável",
+        "en": "Layer editor: a texture per part and a draggable crest"
+      }
+    },
+    {
+      "file": "02-selecao.webp",
+      "caption": {
+        "pt": "Seleção por coleção com rascunho salvo automaticamente",
+        "en": "Pick items by collection, with an auto-saved draft"
+      }
+    },
+    {
+      "file": "03-construcao.webp",
+      "caption": {
+        "pt": "Revisão das peças com texturas aplicadas e bordado",
+        "en": "Piece review with applied textures and embroidery"
+      }
+    },
+    {
+      "file": "04-fila-producao.webp",
+      "caption": {
+        "pt": "Fila de produção do ateliê, com status e prioridade",
+        "en": "Atelier production queue with status and priority"
+      }
+    },
+    {
+      "file": "05-mobile.webp",
+      "caption": {
+        "pt": "Consultora e ateliê também usam pelo celular",
+        "en": "Consultants and atelier also work from a phone"
+      }
+    },
+    {
+      "file": "06-ficha-pdf.webp",
+      "caption": {
+        "pt": "Ficha técnica em PDF gerada para a produção",
+        "en": "Technical sheet PDF generated for production"
+      }
+    },
+    {
+      "file": "07-financeiro.webp",
+      "caption": {
+        "pt": "Motor de precificação: custo, venda, consumidor e lojista",
+        "en": "Pricing engine: cost, factory, retail and wholesale prices"
+      }
+    },
+    {
+      "file": "08-ateliers.webp",
+      "caption": {
+        "pt": "Multi-ateliê: consultoras, equipe e distribuidores por CNPJ",
+        "en": "Multi-atelier: consultants, staff and distributors per company"
+      }
+    }
+  ]
+}

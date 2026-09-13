@@ -1,0 +1,61 @@
+{
+  "repoUrl": null,
+  "gallery": [
+    {
+      "file": "01-visao-geral.webp",
+      "caption": {
+        "pt": "Visão geral: funil do bip à venda e desempenho por loja",
+        "en": "Overview: scan-to-sale funnel and per-store performance"
+      }
+    },
+    {
+      "file": "02-foco-de-venda.webp",
+      "caption": {
+        "pt": "Foco de venda: produto prioritário por categoria, em três níveis",
+        "en": "Sales focus: priority product per category, three levels"
+      }
+    },
+    {
+      "file": "03-catalogo.webp",
+      "caption": {
+        "pt": "Catálogo da rede com tarja, categoria e laboratório",
+        "en": "Network catalogue with prescription class, category and lab"
+      }
+    },
+    {
+      "file": "04-balconistas.webp",
+      "caption": {
+        "pt": "Aproveitamento das oportunidades por balconista",
+        "en": "Opportunity uptake per counter clerk"
+      }
+    },
+    {
+      "file": "05-faturamento.webp",
+      "caption": {
+        "pt": "Faturamento atribuído ao copiloto, atendimento a atendimento",
+        "en": "Revenue attributed to the copilot, sale by sale"
+      }
+    },
+    {
+      "file": "06-regras-de-cesta.webp",
+      "caption": {
+        "pt": "Regras de cesta: o que puxa o quê no balcão",
+        "en": "Basket rules: which item triggers which offer"
+      }
+    },
+    {
+      "file": "07-pontos-instalados.webp",
+      "caption": {
+        "pt": "PDVs instalados por loja, com versão e conexão",
+        "en": "Installed POS terminals per store, version and status"
+      }
+    },
+    {
+      "file": "08-cemiterio.webp",
+      "caption": {
+        "pt": "Lotes a vencer que o balcão oferece primeiro",
+        "en": "Near-expiry batches the counter offers first"
+      }
+    }
+  ]
+}

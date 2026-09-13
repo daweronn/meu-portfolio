@@ -1,0 +1,47 @@
+{
+  "repoUrl": "https://github.com/daweronn/bot-pelada-whatsapp",
+  "gallery": [
+    {
+      "file": "01-lista.webp",
+      "caption": {
+        "pt": "Lista aberta com mensalistas, confirmações e fila de espera",
+        "en": "Open list with regulars, check-ins and waitlist"
+      }
+    },
+    {
+      "file": "02-sorteio.webp",
+      "caption": {
+        "pt": "Fecha a lista e sorteia times nivelados por overall",
+        "en": "Close the list and draw rating-balanced teams"
+      }
+    },
+    {
+      "file": "03-votacoes.webp",
+      "caption": {
+        "pt": "Votações de MVP e Bagre ajustam o overall",
+        "en": "MVP and Bagre votes adjust player ratings"
+      }
+    },
+    {
+      "file": "04-mensalidade.webp",
+      "caption": {
+        "pt": "Mensalidade: pagos, isentos e quem está devendo",
+        "en": "Monthly fees: paid, exempt and who still owes"
+      }
+    },
+    {
+      "file": "05-cadastro.webp",
+      "caption": {
+        "pt": "Cadastro de jogadores com nota e tipo de vaga",
+        "en": "Player registry with rating and membership type"
+      }
+    },
+    {
+      "file": "06-ajuda.webp",
+      "caption": {
+        "pt": "O comando .ajuda lista todos os recursos",
+        "en": "The .ajuda command lists every feature"
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "repoUrl": "https://github.com/daweronn/webdev-extension",
+  "gallery": [
+    {
+      "file": "01-popup-na-pagina.webp",
+      "caption": {
+        "pt": "Popup aberto sobre o portfólio, pronto para capturar",
+        "en": "Popup open over the portfolio, ready to capture"
+      }
+    },
+    {
+      "file": "02-pagina-inteira-desktop.webp",
+      "caption": {
+        "pt": "Portfólio inteiro capturado em desktop 1920px, a 3x",
+        "en": "Whole portfolio captured at 1920px desktop, 3x"
+      }
+    },
+    {
+      "file": "03-pagina-inteira-mobile.webp",
+      "caption": {
+        "pt": "A mesma página no viewport mobile de 390px, a 3x",
+        "en": "The same page in the 390px mobile viewport, 3x"
+      }
+    },
+    {
+      "file": "04-controles.webp",
+      "caption": {
+        "pt": "Dispositivo, formato, qualidade JPEG e resolução de 1x a 4x",
+        "en": "Device, format, JPEG quality and 1x to 4x resolution"
+      }
+    },
+    {
+      "file": "05-resultado.webp",
+      "caption": {
+        "pt": "Cada captura informa dimensões, megapixels e escala usada",
+        "en": "Each capture reports dimensions, megapixels and scale used"
+      }
+    },
+    {
+      "file": "06-nitidez.webp",
+      "caption": {
+        "pt": "Mesmo trecho capturado em 1x e em 4x",
+        "en": "Same area captured at 1x and at 4x"
+      }
+    }
+  ]
+}

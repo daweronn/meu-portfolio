@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { Tag } from "@/components/ui/tag";
 import { ProjectPreview } from "@/features/projects/components/project-preview";
+import { ProjectGallery } from "@/features/projects/components/project-gallery";
 import { useClampOverflow } from "@/features/projects/hooks/use-clamp-overflow";
 import { useExpandHeight } from "@/features/projects/hooks/use-expand-height";
 import type { Project, ProjectLabels } from "@/features/projects/types";
@@ -20,13 +22,19 @@ export function ProjectCard({ project, labels }: ProjectCardProps) {
     useExpandHeight<HTMLDivElement>(collapsedBodyHeight);
   const { ref: descriptionRef, overflowing } =
     useClampOverflow<HTMLParagraphElement>(!expanded);
+  const [galleryOpen, setGalleryOpen] = useState(false);
 
   const hasTechnologies = project.technologies.length > 0;
   const canToggle = overflowing || hasTechnologies;
+  const hasGallery = project.gallery.length > 0;
 
   return (
     <div className="group relative flex w-full flex-col gap-3 rounded-xl border border-border bg-background p-3 transition-all duration-150 ease-out hover:z-10 hover:-translate-y-1 hover:scale-[1.03] hover:border-foreground/20 hover:shadow-lg">
-      <ProjectPreview project={project} />
+      <ProjectPreview
+        project={project}
+        openLabel={labels.openGallery}
+        onOpen={hasGallery ? () => setGalleryOpen(true) : undefined}
+      />
       <div ref={bodyRef} className="flex flex-col gap-2 overflow-hidden px-1">
         <div className="flex items-start justify-between gap-2">
           <h3 className="text-foreground">{project.name}</h3>
@@ -65,6 +73,13 @@ export function ProjectCard({ project, labels }: ProjectCardProps) {
         aria-label={project.name}
         className="absolute inset-0 z-0 rounded-xl"
       />
+      {galleryOpen && (
+        <ProjectGallery
+          project={project}
+          labels={labels}
+          onClose={() => setGalleryOpen(false)}
+        />
+      )}
     </div>
   );
 }

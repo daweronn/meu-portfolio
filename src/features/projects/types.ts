@@ -1,5 +1,10 @@
 import type { Locale } from "@/types/locale";
 
+export interface GalleryImage {
+  src: string;
+  caption: string;
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -7,8 +12,9 @@ export interface Project {
   description: string;
   url: string;
   technologies: string[];
-  logoUrl?: string;
-  imageUrl?: string;
+  imageUrl: string;
+  repoUrl?: string;
+  gallery: GalleryImage[];
 }
 
 export interface FilterOption {
@@ -20,7 +26,6 @@ export interface FilterOption {
 export interface ProjectBase {
   id: string;
   url: string;
-  imageUrl: string;
   technologies: string[];
 }
 
@@ -34,6 +39,16 @@ export interface LocalizedProject extends ProjectBase {
   content: Record<Locale, ProjectContent>;
 }
 
+export interface LocalizedGalleryImage {
+  file: string;
+  caption: Record<Locale, string>;
+}
+
+export interface ProjectGallery {
+  repoUrl: string | null;
+  gallery: LocalizedGalleryImage[];
+}
+
 export interface ProjectLabels {
   section: string;
   searchPlaceholder: string;
@@ -45,4 +60,11 @@ export interface ProjectLabels {
   empty: string;
   previous: string;
   next: string;
+  openGallery: string;
+  closeGallery: string;
+  previousImage: string;
+  nextImage: string;
+  viewRepository: string;
+  privateRepository: string;
+  visitProject: string;
 }

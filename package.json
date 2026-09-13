@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:types": "eslint --config eslint.typed.config.mjs ."
   },
   "dependencies": {
     "clsx": "2.1.1",
@@ -21,14 +23,19 @@
     "tailwind-merge": "2.6.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@next/eslint-plugin-next": "^16.2.7",
     "@types/node": "22.10.6",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.1",
     "autoprefixer": "10.4.20",
-    "eslint": "9.18.0",
-    "eslint-config-next": "^16.2.7",
+    "eslint": "^9.39.5",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import-x": "^4.17.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "postcss": "8.5.1",
     "tailwindcss": "3.4.17",
-    "typescript": "5.7.3"
+    "typescript": "5.7.3",
+    "typescript-eslint": "^8.60.1"
   }
 }

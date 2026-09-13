@@ -4,6 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import { cn } from "@/lib/utils/cn";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { LocaleProvider } from "@/components/providers/locale-provider";
+import { BackgroundGlow } from "@/components/ui/background-glow";
 import { Navbar } from "@/features/navbar/components/navbar";
 import "flag-icons/css/flag-icons.min.css";
 import "./globals.css";
@@ -39,6 +40,7 @@ export default function RootLayout({
           enableSystem={false}
         >
           <LocaleProvider>
+            <BackgroundGlow />
             <Navbar />
             {children}
           </LocaleProvider>

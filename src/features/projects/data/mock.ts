@@ -4,27 +4,63 @@ export const localizedProjects: LocalizedProject[] = [
   {
     id: "resgaty",
     url: "https://skorpiongamer.com.br",
-    imageUrl: "/projetos/fit/resgaty.png",
     technologies: ["Python", "React", "Next.js", "Node.js", "Docker"],
     content: {
       pt: {
         name: "Resgaty",
         headline: "Automação e resgate para criadores de conteúdo",
         description:
-          "Plataforma de automações e resgate para criadores de conteúdo. Case de maior destaque: Skorpion Gamer, canal com 7 milhões de inscritos.",
+          "Plataforma de automações e resgate para criadores de conteúdo. Case de maior destaque: canal com 7 milhões de inscritos.",
       },
       en: {
         name: "Resgaty",
         headline: "Automation and giveaways for content creators",
         description:
-          "Automation and giveaway platform for content creators. Flagship case: Skorpion Gamer, a channel with 7 million subscribers.",
+          "Automation and giveaway platform for content creators. Flagship case: a channel with 7 million subscribers.",
+      },
+    },
+  },
+  {
+    id: "copiloto-balcao",
+    url: "https://nexit.tech",
+    technologies: ["Electron", "React", "TypeScript", "Node.js", "SQLite", "Supabase", ".NET"],
+    content: {
+      pt: {
+        name: "Copiloto de Balcão",
+        headline: "Copiloto de IA para o balcão da farmácia",
+        description:
+          "Integrado ao ERP Farmasoft: o balconista bipa o produto e o painel sugere o que agregar à venda, com argumento e preço, oferece o genérico da mesma fórmula e alerta controlados — em milissegundos, mesmo sem internet. Case: rede de farmácias com 30 mil SKUs classificados.",
+      },
+      en: {
+        name: "Counter Copilot",
+        headline: "AI copilot for the pharmacy counter",
+        description:
+          "Integrated with the Farmasoft ERP: the clerk scans a product and the panel suggests what to add to the sale, with a pitch and price, offers the generic with the same formula and flags controlled drugs — in milliseconds, even offline. Case: a pharmacy chain with 30,000 SKUs classified.",
+      },
+    },
+  },
+  {
+    id: "gestao-rede",
+    url: "https://nexit.tech",
+    technologies: ["React", "TypeScript", "Supabase", "PostgreSQL", "Electron"],
+    content: {
+      pt: {
+        name: "Gestão de Rede",
+        headline: "Painel de gestão da rede de farmácias",
+        description:
+          "O painel onde supervisão e gerência decidem o que o balcão oferece: foco de venda por categoria, regras, catálogo e desempenho por loja, com acesso por papel. A decisão chega a cada PDV em segundos.",
+      },
+      en: {
+        name: "Chain Management",
+        headline: "Management dashboard for the pharmacy chain",
+        description:
+          "The dashboard where supervisors and managers decide what the counter offers: sales focus by category, rules, catalog and per-store performance, with role-based access. Every decision reaches each POS in seconds.",
       },
     },
   },
   {
     id: "bebelize",
     url: "https://www.bebelize.com.br/",
-    imageUrl: "/projetos/fit/bebelize.png",
     technologies: ["React", "Next.js", "Supabase"],
     content: {
       pt: {
@@ -44,7 +80,6 @@ export const localizedProjects: LocalizedProject[] = [
   {
     id: "clipou",
     url: "https://clipou.online",
-    imageUrl: "/projetos/fit/clipou.png",
     technologies: [
       "React",
       "TypeScript",
@@ -73,7 +108,6 @@ export const localizedProjects: LocalizedProject[] = [
   {
     id: "pelada-bot",
     url: "https://github.com/daweronn/bot-pelada-whatsapp",
-    imageUrl: "/projetos/fit/botpelada.png",
     technologies: [],
     content: {
       pt: {
@@ -92,8 +126,7 @@ export const localizedProjects: LocalizedProject[] = [
   },
   {
     id: "fullpage-capture",
-    url: "https://github.com/daweronn/design-system-capture",
-    imageUrl: "/projetos/fit/fullpagecapture.png",
+    url: "https://github.com/daweronn/webdev-extension",
     technologies: [],
     content: {
       pt: {
