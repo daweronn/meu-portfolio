@@ -19,7 +19,7 @@ export function PreviousRoles({ experiences, labels }: PreviousRolesProps) {
   }
 
   return (
-    <div>
+    <div className="reveal">
       <button
         type="button"
         aria-expanded={open}

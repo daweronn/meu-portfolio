@@ -9,6 +9,7 @@ export const localizedFutureProjects: LocalizedFutureProject[] = [
     id: "ignis-stack",
     name: "Ignis Stack",
     logoUrl: "/ignis-stack.svg",
+    housesPortfolio: true,
     content: {
       pt: {
         status: "Em breve",
@@ -27,6 +28,6 @@ export const localizedFutureProjects: LocalizedFutureProject[] = [
 ];
 
 export const futureLabelsByLocale: Record<Locale, FutureLabels> = {
-  pt: { section: "Futuros projetos" },
-  en: { section: "Upcoming projects" },
+  pt: { section: "Futuros projetos", portfolio: "{count} projetos já a caminho" },
+  en: { section: "Upcoming projects", portfolio: "{count} projects already on their way" },
 };

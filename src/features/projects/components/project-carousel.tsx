@@ -81,14 +81,14 @@ export function ProjectCarousel({ projects, labels }: ProjectCarouselProps) {
 
   if (projects.length === 0) {
     return (
-      <p className="rounded-xl border border-dashed border-border py-12 text-center text-sm text-muted">
+      <p className="reveal rounded-xl border border-dashed border-border py-12 text-center text-sm text-muted">
         {labels.empty}
       </p>
     );
   }
 
   return (
-    <div className="flex items-center gap-2 sm:gap-3">
+    <div className="reveal flex items-center gap-2 sm:gap-3">
       <CarouselButton
         direction={-1}
         disabled={atStart}
